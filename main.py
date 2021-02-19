@@ -58,7 +58,7 @@ class StreamListener(tweepy.StreamListener):
 if __name__ == "__main__":
     # get config
     with open("cong.yml", "r") as yf:
-        conf = yaml.load(yf, Loader=yaml.FullLoader)
+        conf = yaml.load(yf, Loader=yaml.SafeLoader)
         if not conf:
             print("no configurations")
         else:
